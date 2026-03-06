@@ -14,10 +14,16 @@
   --color-Blue100: hsl(218, 100%, 97%);
   --color-Blue50: hsl(231, 100%, 99%);
   --color-White: hsl(0, 100%, 100%);
+
+  --font-Ubuntu: "Ubuntu", sans-serif;
 }
 
 .bg-img {
   background-image: url("./assets/bg-sidebar-desktop.svg");
+}
+
+* {
+  @apply font-Ubuntu;
 }
 
 button {
