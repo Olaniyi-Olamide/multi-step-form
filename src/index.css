@@ -15,3 +15,15 @@
   --color-Blue50: hsl(231, 100%, 99%);
   --color-White: hsl(0, 100%, 100%);
 }
+
+.bg-img {
+  background-image: url("./assets/bg-sidebar-desktop.svg");
+}
+
+button {
+  cursor: pointer;
+}
+
+.active {
+  @apply bg-Blue300;
+}
