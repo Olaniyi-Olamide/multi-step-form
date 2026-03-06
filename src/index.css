@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@theme {
+  --color-Blue950: hsl(213, 96%, 18%);
+  --color-Purple600: hsl(243, 100%, 62%);
+  --color-Blue300: hsl(228, 100%, 84%);
+  --color-Blue200: hsl(206, 94%, 87%);
+  --color-Red500: hsl(354, 84%, 57%);
+
+  /*### Neutral*/
+
+  --color-Grey500: hsl(231, 11%, 63%);
+  --color-Purple200: hsl(229, 24%, 87%);
+  --color-Blue100: hsl(218, 100%, 97%);
+  --color-Blue50: hsl(231, 100%, 99%);
+  --color-White: hsl(0, 100%, 100%);
+}
