@@ -1,10 +1,10 @@
-import Button from "./Button";
+import NextStepButton from "./NextStepButton";
 
 function PersonalInfoForm() {
   return (
-    <div className="flex flex-col gap-[1rem] basis-[70%] px-[2rem]">
+    <section className="flex flex-col gap-[1rem] basis-[70%] px-[2rem]">
       <header>
-        <h1 className="text-Blue950 font-bold text-[1.5rem]">Personal info</h1>
+        <h1 className="text-Blue950 font-bold text-[1.8rem]">Personal info</h1>
         <p className="text-Grey500 font-semibold">
           Please provide your name, email address and phone number.
         </p>
@@ -41,9 +41,9 @@ function PersonalInfoForm() {
       </form>
 
       <div className="flex md:justify-end w-[70%]">
-        <Button navigate="/selectplan" />
+        <NextStepButton navigate="/selectplan" />
       </div>
-    </div>
+    </section>
   );
 }
 

@@ -6,7 +6,7 @@ function SideBar() {
       <div className="flex items-center gap-[1.5rem]">
         <NavLink to="/">
           <div className="border-[0.1rem] border-Blue50 text-bold rounded-full w-[2.3rem] h-[2.3rem] text-center flex items-center justify-center">
-            <p className="text-[1.2rem] text-Blue950 font-bold">1</p>
+            <p className="text-[1.2rem] font-bold">1</p>
           </div>
         </NavLink>
         <div>

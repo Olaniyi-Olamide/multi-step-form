@@ -4,7 +4,7 @@ interface Prop {
   navigate: string;
 }
 
-function Button({ navigate }: Prop) {
+function NextStepButton({ navigate }: Prop) {
   const navigation = useNavigate();
 
   function handleNavigation(to: string) {
@@ -14,7 +14,7 @@ function Button({ navigate }: Prop) {
   return (
     <div>
       <button
-        className="bg-Blue950 text-Blue50 font-semibold px-[1.3rem] py-[0.6rem] rounded-lg"
+        className="bg-Blue950 text-Blue50 font-semibold px-[1.3rem] py-[0.5rem] rounded-lg"
         onClick={() => handleNavigation(navigate)}
       >
         Next Step
@@ -23,4 +23,4 @@ function Button({ navigate }: Prop) {
   );
 }
 
-export default Button;
+export default NextStepButton;
