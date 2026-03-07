@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import YourInfo from "./pages/YourInfo";
 import SelectPlan from "./pages/SelectPlan";
 import AddOns from "./pages/AddOns";
+import Summary from "./pages/Summary";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <Route path="/" element={<YourInfo />} />
         <Route path="/selectplan" element={<SelectPlan />} />
         <Route path="/addons" element={<AddOns />} />
+        <Route path="/summary" element={<Summary />} />
       </Routes>
     </div>
   );
