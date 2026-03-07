@@ -31,5 +31,5 @@ button {
 }
 
 .active {
-  @apply bg-Blue300;
+  @apply bg-Blue300 rounded-full border-none;
 }

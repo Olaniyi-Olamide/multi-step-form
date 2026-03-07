@@ -41,7 +41,7 @@ function PersonalInfoForm() {
       </form>
 
       <div className="flex md:justify-end w-[70%]">
-        <Button />
+        <Button navigate="/selectplan" />
       </div>
     </div>
   );
