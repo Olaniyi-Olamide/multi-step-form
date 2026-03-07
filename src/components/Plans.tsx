@@ -3,6 +3,7 @@ import AdvancedIcon from "../assets/icon-advanced.svg";
 import ProIcon from "../assets/icon-pro.svg";
 import NextStepButton from "./NextStepButton";
 import GoBackButton from "./GoBackButton";
+import ToggleButton from "./ToggleButton";
 
 function Plans() {
   return (
@@ -60,10 +61,14 @@ function Plans() {
         </figure>
       </div>
 
-      <div className="bg-Blue300 flex items-center justify-center w-[60%] py-[1rem] rounded-lg"></div>
+      <div className="bg-Blue200 flex items-center justify-center w-[60%] py-[1rem] rounded-lg gap-[1rem]">
+        <span className="font-semibold text-Grey500">Monthly</span>
+        <ToggleButton />
+        <span className="text-Blue950 font-semibold">Yearly</span>
+      </div>
 
       <div className="flex justify-between w-[60%] items-center mt-[4rem]">
-        <GoBackButton />
+        <GoBackButton navigate="/" />
         <NextStepButton navigate="/addons" />
       </div>
     </section>

@@ -1,17 +1,20 @@
 import { useNavigate } from "react-router-dom";
 
-function GoBackButton() {
+interface Prop {
+  navigate: string;
+}
+
+function GoBackButton({ navigate }: Prop) {
   const navigation = useNavigate();
 
-  function handleNavigation() {
-    navigation(-1);
+  function handleNavigation(to: string) {
+    navigation(to);
   }
-
   return (
     <div>
       <button
         className="bg-transparent text-Grey500 font-semibold"
-        onClick={handleNavigation}
+        onClick={() => handleNavigation(navigate)}
       >
         Go Back
       </button>
