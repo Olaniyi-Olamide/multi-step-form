@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 function SideBar() {
   return (
-    <aside className="bg-center bg-cover basis-[30%] md:p-[2rem] md:rounded-lg bg-img flex md:flex-col gap-[1.5rem] items-center justify-center md:items-start md:justify-normal py-[2rem] pb-[8rem]">
+    <aside className="bg-center bg-cover basis-[30%] md:p-[2rem] md:rounded-lg bg-img flex md:flex-col gap-[1.5rem] items-center justify-center md:items-start md:justify-normal py-[2rem] pb-[8rem] text-Blue50">
       <div className="flex items-center gap-[1.5rem]">
         <NavLink to="/">
           <div className="border-[0.1rem] border-Blue50 text-bold rounded-full w-[2.3rem] h-[2.3rem] text-center flex items-center justify-center">
@@ -18,7 +18,7 @@ function SideBar() {
       <div className="flex items-center gap-[1.5rem]">
         <NavLink to="/selectplan">
           <div className="border-[0.1rem] border-Blue50 text-bold rounded-full w-[2.3rem] h-[2.3rem] text-center flex items-center justify-center">
-            <p className="text-[1.2rem] text-Blue50 font-bold">2</p>
+            <p className="text-[1.2rem] font-bold">2</p>
           </div>
         </NavLink>
         <div className="hidden md:block">
@@ -30,7 +30,7 @@ function SideBar() {
       <div className="flex items-center gap-[1.5rem]">
         <NavLink to="/addons">
           <div className="border-[0.1rem] border-Blue50 text-bold rounded-full w-[2.3rem] h-[2.3rem] text-center flex items-center justify-center">
-            <p className="text-[1.2rem] text-Blue50 font-bold">3</p>
+            <p className="text-[1.2rem] font-bold">3</p>
           </div>
         </NavLink>
         <div className="hidden md:block">
@@ -42,7 +42,7 @@ function SideBar() {
       <div className="flex items-center gap-[1.5rem]">
         <NavLink to="/summary">
           <div className="border-[0.1rem] border-Blue50 text-bold rounded-full w-[2.3rem] h-[2.3rem] text-center flex items-center justify-center">
-            <p className="text-[1.2rem] text-Blue50 font-bold">4</p>
+            <p className="text-[1.2rem] font-bold">4</p>
           </div>
         </NavLink>
         <div className="hidden md:block">
