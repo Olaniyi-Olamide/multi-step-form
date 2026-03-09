@@ -1,7 +1,10 @@
 import GoBackButton from "./GoBackButton";
 import NextStepButton from "./NextStepButton";
+import { useForm } from "../context/FormContext";
 
 function Addon() {
+  const { monthly } = useForm();
+
   return (
     <section className="flex flex-col gap-[1rem] basis-[70%] px-[2rem] bg-Blue100 mx-[1.2rem] md:mx-0 py-[2rem] rounded-2xl mt-[-5rem] md:mt-0 mb-[2rem] md:mb-0">
       <header>
@@ -25,7 +28,9 @@ function Addon() {
             </div>
           </div>
 
-          <span className="text-Purple600 text-[0.8rem]">+$10/yr</span>
+          <span className="text-Purple600 text-[0.8rem]">
+            {!monthly ? " +$1/mo" : "+$10/y"}
+          </span>
         </div>
 
         <div className="w-full rounded-lg px-[1rem] py-[1.2rem] flex justify-between items-center border-[0.12rem] border-Blue950 bg-Blue200">
@@ -41,7 +46,9 @@ function Addon() {
             </div>
           </div>
 
-          <span className="text-Purple600 text-[0.8rem]">+$20/yr</span>
+          <span className="text-Purple600 text-[0.8rem]">
+            {!monthly ? " +$2/mo" : "+$20/y"}
+          </span>
         </div>
 
         <div className="w-full rounded-lg px-[1rem] py-[1.2rem] flex justify-between items-center border-[0.1rem] border-Grey500">
@@ -57,7 +64,9 @@ function Addon() {
             </div>
           </div>
 
-          <span className="text-Purple600 text-[0.8rem]">+$20/yr</span>
+          <span className="text-Purple600 text-[0.8rem]">
+            {!monthly ? " +$2/mo" : "+$20/y"}
+          </span>
         </div>
       </div>
 

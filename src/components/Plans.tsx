@@ -4,8 +4,11 @@ import ProIcon from "../assets/icon-pro.svg";
 import NextStepButton from "./NextStepButton";
 import GoBackButton from "./GoBackButton";
 import ToggleButton from "./ToggleButton";
+import { useForm } from "../context/FormContext";
 
 function Plans() {
+  const { monthly } = useForm();
+
   return (
     <section className="flex flex-col gap-[1rem] basis-[70%] px-[2rem] bg-Blue100 mx-[1.2rem] md:mx-0 py-[2rem] rounded-2xl mt-[-5rem] md:mt-0 mb-[2rem] md:mb-0">
       <header>
@@ -27,10 +30,14 @@ function Plans() {
 
           <figcaption>
             <h5 className="font-bold text-Blue950 text-[0.85rem]">Arcade</h5>
-            <p className="text-[0.75rem] text-Grey500">$90/yr</p>
-            <p className="text-[0.75rem] text-Blue950 font-semibold">
-              2 months free
+            <p className="text-[0.75rem] text-Grey500">
+              {!monthly ? "$9/mo" : "$90/yr"}
             </p>
+            {monthly && (
+              <p className="text-[0.75rem] text-Blue950 font-semibold">
+                2 months free
+              </p>
+            )}
           </figcaption>
         </figure>
         <figure className="flex md:flex-col rounded-lg px-[0.8rem] py-[1rem] border-[0.12rem] border-Grey500 gap-[2rem]">
@@ -42,10 +49,14 @@ function Plans() {
 
           <figcaption>
             <h5 className="font-bold text-Blue950 text-[0.85rem]">Advanced</h5>
-            <p className="text-[0.75rem] text-Grey500">$120/yr</p>
-            <p className="text-[0.75rem] text-Blue950 font-semibold">
-              2 months free
+            <p className="text-[0.75rem] text-Grey500">
+              {!monthly ? "$12/mo" : "$120/yr"}
             </p>
+            {monthly && (
+              <p className="text-[0.75rem] text-Blue950 font-semibold">
+                2 months free
+              </p>
+            )}
           </figcaption>
         </figure>
         <figure className="flex md:flex-col rounded-lg px-[0.8rem] py-[1rem] border-[0.12rem] border-Grey500 gap-[2rem]">
@@ -53,10 +64,14 @@ function Plans() {
 
           <figcaption>
             <h5 className="font-bold text-Blue950 text-[0.85rem]">Pro</h5>
-            <p className="text-[0.75rem] text-Grey500">$150/yr</p>
-            <p className="text-[0.75rem] text-Blue950 font-semibold">
-              2 months free
+            <p className="text-[0.75rem] text-Grey500">
+              {!monthly ? "$15/mo" : "$150/yr"}
             </p>
+            {monthly && (
+              <p className="text-[0.75rem] text-Blue950 font-semibold">
+                2 months free
+              </p>
+            )}
           </figcaption>
         </figure>
       </div>

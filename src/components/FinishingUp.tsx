@@ -3,10 +3,11 @@ import GoBackButton from "./GoBackButton";
 import ConfirmButton from "./ConfirmButton";
 import Confirmation from "./Confirmation";
 import { useState } from "react";
+import { useForm } from "../context/FormContext";
 
 function FinishingUp() {
   const [confirmation, setConfirmation] = useState(false);
-
+  const { monthly } = useForm();
   return confirmation ? (
     <>
       <Confirmation />
@@ -24,7 +25,7 @@ function FinishingUp() {
         <div className="flex justify-between items-center mb-[1rem]">
           <div>
             <h4 className="text-[1rem] text-Blue950 font-bold">
-              Arcade (Yearly)
+              Arcade <span>{!monthly ? "(Monthly)" : "(Yearly)"}</span>
             </h4>
 
             <Link to="/selectplan">
@@ -34,7 +35,9 @@ function FinishingUp() {
             </Link>
           </div>
 
-          <span className="text-Blue950 font-bold">$90/yr</span>
+          <span className="text-Blue950 font-bold">
+            {!monthly ? "+$9/mo" : "+$90/yr"}
+          </span>
         </div>
 
         <hr className="text-Grey500 opacity-[0.5]" />
@@ -44,7 +47,7 @@ function FinishingUp() {
             Online service
           </span>
           <span className="text-Blue950 text-[0.8rem] font-semibold">
-            +$10/yr
+            {!monthly ? "+$1/mo" : "+$10/yr"}
           </span>
         </div>
         <div className="flex items-center justify-between mt-[1rem]">
@@ -52,16 +55,18 @@ function FinishingUp() {
             Larger storage
           </span>
           <span className="text-Blue950 text-[0.8rem] font-semibold">
-            +$20/yr
+            {!monthly ? "+$2/mo" : "+$20/yr"}
           </span>
         </div>
       </section>
 
       <div className="w-full flex items-center justify-between ">
         <span className="text-Grey500 text-[0.8rem] font-semibold">
-          Total (per year)
+          Total <span>{!monthly ? "(per monthly)" : "(per yearly)"}</span>
         </span>
-        <span className="text-Purple600 text-[1rem] font-bold">+$120/yr</span>
+        <span className="text-Purple600 text-[1rem] font-bold">
+          {!monthly ? "+$12/mo" : "+$120/yr"}
+        </span>
       </div>
 
       <footer className="flex justify-between w-full items-center mt-[3rem]">

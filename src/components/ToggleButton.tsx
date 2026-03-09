@@ -1,11 +1,7 @@
-import { useState } from "react";
+import { useForm } from "../context/FormContext";
 
 function ToggleButton() {
-  const [monthly, setMonthly] = useState(true);
-
-  function handleToggle() {
-    setMonthly((m) => !m);
-  }
+  const { monthly, handleToggle } = useForm();
   return (
     <button
       className="w-12 h-6 flex items-center rounded-full p-1 transition bg-Blue950"
