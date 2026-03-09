@@ -1,9 +1,17 @@
 import { Link } from "react-router-dom";
 import GoBackButton from "./GoBackButton";
 import ConfirmButton from "./ConfirmButton";
+import Confirmation from "./Confirmation";
+import { useState } from "react";
 
 function FinishingUp() {
-  return (
+  const [confirmation, setConfirmation] = useState(false);
+
+  return confirmation ? (
+    <>
+      <Confirmation />
+    </>
+  ) : (
     <main className="flex flex-col gap-[1rem] basis-[70%] px-[2rem] bg-Blue100 mx-[1.2rem] md:mx-0 py-[2rem] rounded-2xl mt-[-5rem] md:mt-0 mb-[2rem] md:mb-0">
       <header>
         <h1 className="text-Blue950 font-bold text-[1.8rem]">Finishing up</h1>

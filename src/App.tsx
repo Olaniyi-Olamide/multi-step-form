@@ -11,6 +11,7 @@ function App() {
         <Route path="/" element={<YourInfo />} />
         <Route path="/selectplan" element={<SelectPlan />} />
         <Route path="/addons" element={<AddOns />} />
+
         <Route path="/summary" element={<Summary />} />
       </Routes>
     </div>
