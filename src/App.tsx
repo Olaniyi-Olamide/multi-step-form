@@ -6,7 +6,7 @@ import Summary from "./pages/Summary";
 
 function App() {
   return (
-    <div className="bg-Blue200 flex justify-center items-center h-[100vh]">
+    <div className="bg-Blue200 md:flex md:justify-center md:items-center h-[100vh]">
       <Routes>
         <Route path="/" element={<YourInfo />} />
         <Route path="/selectplan" element={<SelectPlan />} />

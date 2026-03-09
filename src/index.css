@@ -18,8 +18,11 @@
   --font-Ubuntu: "Ubuntu", sans-serif;
 }
 
-.bg-img {
+/* .bg-img {
   background-image: url("./assets/bg-sidebar-desktop.svg");
+} */
+.bg-img {
+  background-image: url("./assets/bg-sidebar-mobile.svg");
 }
 
 * {
@@ -36,4 +39,10 @@ button {
 
 .active-plan {
   @apply bg-Blue200 border-Blue950;
+}
+
+@media (width >= 48rem) {
+  .bg-img {
+    background-image: url("./assets/bg-sidebar-desktop.svg");
+  }
 }

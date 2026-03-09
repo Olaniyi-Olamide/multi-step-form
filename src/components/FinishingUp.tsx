@@ -4,7 +4,7 @@ import ConfirmButton from "./ConfirmButton";
 
 function FinishingUp() {
   return (
-    <main className="flex flex-col gap-[2rem] basis-[70%] px-[2rem]">
+    <main className="flex flex-col gap-[1rem] basis-[70%] px-[2rem] bg-Blue100 mx-[1.2rem] md:mx-0 py-[2rem] rounded-2xl mt-[-5rem] md:mt-0 mb-[2rem] md:mb-0">
       <header>
         <h1 className="text-Blue950 font-bold text-[1.8rem]">Finishing up</h1>
         <p className="text-Grey500 font-semibold">
@@ -12,7 +12,7 @@ function FinishingUp() {
         </p>
       </header>
 
-      <section className="w-[70%] p-[1rem] bg-Blue200 rounded-lg">
+      <section className="w-full p-[1rem] bg-Blue200 rounded-lg">
         <div className="flex justify-between items-center mb-[1rem]">
           <div>
             <h4 className="text-[1rem] text-Blue950 font-bold">
@@ -49,14 +49,14 @@ function FinishingUp() {
         </div>
       </section>
 
-      <div className="w-[70%] flex items-center justify-between ">
+      <div className="w-full flex items-center justify-between ">
         <span className="text-Grey500 text-[0.8rem] font-semibold">
           Total (per year)
         </span>
         <span className="text-Purple600 text-[1rem] font-bold">+$120/yr</span>
       </div>
 
-      <footer className="flex justify-between w-[70%] items-center mt-[3rem]">
+      <footer className="flex justify-between w-full items-center mt-[3rem]">
         <GoBackButton navigate="/addons" />
         <ConfirmButton navigate="*" />
       </footer>

@@ -3,7 +3,7 @@ import NextStepButton from "./NextStepButton";
 
 function Addon() {
   return (
-    <section className="flex flex-col gap-[2rem] basis-[70%] px-[2rem]">
+    <section className="flex flex-col gap-[1rem] basis-[70%] px-[2rem] bg-Blue100 mx-[1.2rem] md:mx-0 py-[2rem] rounded-2xl mt-[-5rem] md:mt-0 mb-[2rem] md:mb-0">
       <header>
         <h1 className="text-Blue950 font-bold text-[1.8rem]">Pick add-ons</h1>
         <p className="text-Grey500 font-semibold">
@@ -12,7 +12,7 @@ function Addon() {
       </header>
 
       <div className="flex flex-col gap-[1rem]">
-        <div className="w-[70%] rounded-lg px-[1rem] py-[1.2rem] flex justify-between items-center border-[0.12rem] border-Blue950 bg-Blue200">
+        <div className="w-full rounded-lg px-[1rem] py-[1.2rem] flex justify-between items-center border-[0.12rem] border-Blue950 bg-Blue200">
           <div className="flex items-center gap-[2rem]">
             <input type="checkbox" className="h-12 w-4" checked />
             <div>
@@ -28,7 +28,7 @@ function Addon() {
           <span className="text-Purple600 text-[0.8rem]">+$10/yr</span>
         </div>
 
-        <div className="w-[70%] rounded-lg px-[1rem] py-[1.2rem] flex justify-between items-center border-[0.12rem] border-Blue950 bg-Blue200">
+        <div className="w-full rounded-lg px-[1rem] py-[1.2rem] flex justify-between items-center border-[0.12rem] border-Blue950 bg-Blue200">
           <div className="flex items-center gap-[2rem]">
             <input type="checkbox" className="h-12 w-4" checked />
             <div>
@@ -44,7 +44,7 @@ function Addon() {
           <span className="text-Purple600 text-[0.8rem]">+$20/yr</span>
         </div>
 
-        <div className="w-[70%] rounded-lg px-[1rem] py-[1.2rem] flex justify-between items-center border-[0.1rem] border-Grey500">
+        <div className="w-full rounded-lg px-[1rem] py-[1.2rem] flex justify-between items-center border-[0.1rem] border-Grey500">
           <div className="flex items-center gap-[2rem]">
             <input type="checkbox" className="h-12 w-4" />
             <div>
@@ -61,7 +61,7 @@ function Addon() {
         </div>
       </div>
 
-      <div className="flex justify-between w-[70%] items-center">
+      <div className="flex justify-between w-full items-center mt-[2rem] md:mt-0">
         <GoBackButton navigate="/selectplan" />
         <NextStepButton navigate="/summary" />
       </div>

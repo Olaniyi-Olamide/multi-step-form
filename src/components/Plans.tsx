@@ -7,7 +7,7 @@ import ToggleButton from "./ToggleButton";
 
 function Plans() {
   return (
-    <section className="flex flex-col gap-[2rem] basis-[70%] px-[2rem]">
+    <section className="flex flex-col gap-[1rem] basis-[70%] px-[2rem] bg-Blue100 mx-[1.2rem] md:mx-0 py-[2rem] rounded-2xl mt-[-5rem] md:mt-0 mb-[2rem] md:mb-0">
       <header>
         <h1 className="text-Blue950 font-bold text-[1.8rem]">
           Select your plan
@@ -17,8 +17,8 @@ function Plans() {
         </p>
       </header>
 
-      <div className="flex flex-row items-center gap-[1.5rem]">
-        <figure className="flex flex-col rounded-lg px-[0.8rem] py-[1rem] border-[0.12rem] border-Grey500 gap-[2rem] active-plan">
+      <div className="flex flex-col md:flex-row md:items-center gap-[1.5rem]">
+        <figure className="flex md:flex-col rounded-lg px-[0.8rem] py-[1rem] border-[0.12rem] border-Grey500 gap-[2rem] active-plan">
           <img
             src={ArcadeIcon}
             alt="Arcade-Icon"
@@ -33,7 +33,7 @@ function Plans() {
             </p>
           </figcaption>
         </figure>
-        <figure className="flex flex-col rounded-lg px-[0.8rem] py-[1rem] border-[0.12rem] border-Grey500 gap-[2rem]">
+        <figure className="flex md:flex-col rounded-lg px-[0.8rem] py-[1rem] border-[0.12rem] border-Grey500 gap-[2rem]">
           <img
             src={AdvancedIcon}
             alt="Advanced-Icon"
@@ -48,7 +48,7 @@ function Plans() {
             </p>
           </figcaption>
         </figure>
-        <figure className="flex flex-col rounded-lg px-[0.8rem] py-[1rem] border-[0.12rem] border-Grey500 gap-[2rem]">
+        <figure className="flex md:flex-col rounded-lg px-[0.8rem] py-[1rem] border-[0.12rem] border-Grey500 gap-[2rem]">
           <img src={ProIcon} alt="Pro-Icon" className="h-[2rem] w-[2rem]" />
 
           <figcaption>
@@ -61,13 +61,13 @@ function Plans() {
         </figure>
       </div>
 
-      <div className="bg-Blue200 flex items-center justify-center w-[60%] py-[1rem] rounded-lg gap-[1rem]">
+      <div className="bg-Blue200 flex items-center justify-center w-full py-[1rem] rounded-lg gap-[1rem]">
         <span className="font-semibold text-Grey500">Monthly</span>
         <ToggleButton />
         <span className="text-Blue950 font-semibold">Yearly</span>
       </div>
 
-      <div className="flex justify-between w-[60%] items-center mt-[4rem]">
+      <div className="flex justify-between w-full items-center mt-[4rem]">
         <GoBackButton navigate="/" />
         <NextStepButton navigate="/addons" />
       </div>
