@@ -7,7 +7,7 @@ import { useForm } from "../context/FormContext";
 
 function FinishingUp() {
   const [confirmation, setConfirmation] = useState(false);
-  const { monthly } = useForm();
+  const { monthly, currentPlan, activeAddon } = useForm();
   return confirmation ? (
     <>
       <Confirmation />
@@ -25,7 +25,8 @@ function FinishingUp() {
         <div className="flex justify-between items-center mb-[1rem]">
           <div>
             <h4 className="text-[1rem] text-Blue950 font-bold">
-              Arcade <span>{!monthly ? "(Monthly)" : "(Yearly)"}</span>
+              {currentPlan.plan}{" "}
+              <span>{!monthly ? "(Monthly)" : "(Yearly)"}</span>
             </h4>
 
             <Link to="/selectplan">
@@ -35,29 +36,42 @@ function FinishingUp() {
             </Link>
           </div>
 
-          <span className="text-Blue950 font-bold">
-            {!monthly ? "+$9/mo" : "+$90/yr"}
-          </span>
+          <span className="text-Blue950 font-bold">{currentPlan.price}</span>
         </div>
 
         <hr className="text-Grey500 opacity-[0.5]" />
+        {activeAddon.includes("1") && (
+          <div className="flex items-center justify-between mt-[1rem]">
+            <span className="text-Grey500 text-[0.8rem] font-semibold">
+              Online service
+            </span>
+            <span className="text-Blue950 text-[0.8rem] font-semibold">
+              {!monthly ? "+$1/mo" : "+$10/yr"}
+            </span>
+          </div>
+        )}
 
-        <div className="flex items-center justify-between mt-[1rem]">
-          <span className="text-Grey500 text-[0.8rem] font-semibold">
-            Online service
-          </span>
-          <span className="text-Blue950 text-[0.8rem] font-semibold">
-            {!monthly ? "+$1/mo" : "+$10/yr"}
-          </span>
-        </div>
-        <div className="flex items-center justify-between mt-[1rem]">
-          <span className="text-Grey500 text-[0.8rem] font-semibold">
-            Larger storage
-          </span>
-          <span className="text-Blue950 text-[0.8rem] font-semibold">
-            {!monthly ? "+$2/mo" : "+$20/yr"}
-          </span>
-        </div>
+        {activeAddon.includes("2") && (
+          <div className="flex items-center justify-between mt-[1rem]">
+            <span className="text-Grey500 text-[0.8rem] font-semibold">
+              Larger storage
+            </span>
+            <span className="text-Blue950 text-[0.8rem] font-semibold">
+              {!monthly ? "+$2/mo" : "+$20/yr"}
+            </span>
+          </div>
+        )}
+
+        {activeAddon.includes("3") && (
+          <div className="flex items-center justify-between mt-[1rem]">
+            <span className="text-Grey500 text-[0.8rem] font-semibold">
+              Customizable Profile
+            </span>
+            <span className="text-Blue950 text-[0.8rem] font-semibold">
+              {!monthly ? "+$2/mo" : "+$20/yr"}
+            </span>
+          </div>
+        )}
       </section>
 
       <div className="w-full flex items-center justify-between ">
